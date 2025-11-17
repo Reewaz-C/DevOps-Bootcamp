@@ -121,3 +121,35 @@ Linux file permissions are a fundamental aspect of its security model, controlli
     ```bash
     $ chown riwaj:devgroup file1
     ```
+
+### 4. Network commands
+
+- ip addr: shows ip information
+    
+    ```bash
+    $ ip addr
+    ```
+
+- ping: Check the connectivity.
+    
+    ```bash
+    $ ping -c 4 8.8.8.8
+    ```
+
+- netstat: Displays network connections, routing tables, listening ports.
+
+    ```bash
+    $ netstat -tuln
+    ```
+
+- telnet: It is a network protocol that allows us to connect and communicate with remote server over TCP/IP networl. Used to test connectivity to a TCP port on a remote server.
+
+    ```bash
+    $ telnet netflix.com 80
+    ```
+
+- ss: ss command is a tool used to dump socket statistics and displays information in similar to netstat.
+
+    ```bash
+    $ ss -tuln
+    ```
