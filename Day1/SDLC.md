@@ -28,4 +28,24 @@ Waterfall Methodoly is a SDLC model where the software development approach is i
 ### Cons:
 
 1. It is non flexible and difficult to adapt to changes.
-2. Testing is only done in late development stage. 
+2. Testing is only done in late development stage.
+
+![SDLC Diagram](waterfall.jpeg)
+
+## Agile Methodology
+
+Agile methodology is an SDLC model with an iterative and flexible approach to the software development which emphasizes on adaptability, collaborations which the waterfall methodolgy lacks. This basically breaks down the large project into smaller managable cycles called sprints and delivers incrimentally.
+
+### Workflow of Agile Methodology
+
+1. Backlog Creation: The requirement gathering, features and system requiremnts are listed in product backlog.
+
+2. Sprint Planning: The team allocates the tasks for the upcomming sprints.
+
+3. Development: The teams works on the development incrementally.
+
+4. Testing: Here the testing is done continously throughout the development.
+
+5. Sprint Review: The team demonstrate the product to the clients or stakeholders for any feedback and improvements.
+
+6. Retrospective: The teams discuess further improvements for the next sprint.
