@@ -30,7 +30,7 @@ Waterfall Methodoly is a SDLC model where the software development approach is i
 1. It is non flexible and difficult to adapt to changes.
 2. Testing is only done in late development stage.
 
-![SDLC Diagram](waterfall.jpeg)
+![SDLC Diagram](./Img/waterfall.jpeg)
 
 ## Agile Methodology
 
@@ -61,4 +61,4 @@ Agile methodology is an SDLC model with an iterative and flexible approach to th
 1. It is less predictable as frequent changes might take place.
 
 
-![SDLC Diagram](agile.avif)
+![SDLC Diagram](./Img/agile.avif)
