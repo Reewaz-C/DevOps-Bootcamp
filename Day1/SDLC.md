@@ -1,4 +1,4 @@
-# SOFTWARE DEVELOPMENT LIFE CYCLE
+# **SOFTWARE DEVELOPMENT LIFE CYCLE**
 
 Software Developemnt Life cycle or SDLC is a process which are used bt the dev teams to plan, design, build, and test quality software. It is basically a framework that gives a systematic approach to the development of the software development which ensures efficiency, quality and client requirements and needs. There are majorly two models which is used i.e. the waterfall model and Agile methodology.
 
