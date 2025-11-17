@@ -75,5 +75,49 @@ applications and services like passwd.
     -rw-rw-rw- 1 riwaz riwaz 2623 Nov 17 14:51 SDLC.md
     ```
 
-** File Management**
+**File Management**
 
+1. `touch file1`: Creats a file named "file1".
+
+    ```bash
+    $ touch file1
+    ```
+2. `mkdir folder`: Creats a directory.
+
+    ```bash
+    $ mkdir folder
+    ```
+
+3. `cp`: Copies files
+
+    ```bash
+    $ cp file1 /home/user/
+    ```
+
+4. `mv`: Moves or rename files
+
+    ```bash
+    $ mv file1 file2
+    ```
+
+### 3. User Permissions
+
+Linux file permissions are a fundamental aspect of its security model, controlling access to files and directories for different users and groups.
+
+**Permission Types**
+
+- r: Read (4)
+- w: Write (2)
+- x: Execute (1)
+
+**Changing Permisssions**
+
+    ```bash
+    $ chmod 755 file1
+    ```
+
+**Changing Ownership**
+
+    ```bash
+    $ chown riwaj:devgroup file1
+    ```
