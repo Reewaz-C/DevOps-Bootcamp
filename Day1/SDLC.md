@@ -50,5 +50,15 @@ Agile methodology is an SDLC model with an iterative and flexible approach to th
 
 6. Retrospective: The teams discuess further improvements for the next sprint.
 
+### Pros:
+
+1. Highly adaptable and flexible.
+2. Testing is done throughout the development stage.
+3. Efficient collaboration and client feedback.
+
+### Cons:
+
+1. It is less predictable as frequent changes might take place.
+
 
 ![SDLC Diagram](agile.avif)
