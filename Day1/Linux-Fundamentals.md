@@ -51,9 +51,16 @@ applications and services like passwd.
 ### 2. Basic Linux Commands
 
 **Navigation**
-- 'pwd'
-- 'ls'
-- 'cd'
+    '''bash
+    $ pwd
+    /home/riwaz/DevOps-Bootcamp/Day1
+    '''
+
+    '''bash
+    $ pwd
+    /home/riwaz/DevOps-Bootcamp/Day1
+    '''
+    
 
 ** File Management**
 
