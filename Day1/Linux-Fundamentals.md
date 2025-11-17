@@ -51,16 +51,27 @@ applications and services like passwd.
 ### 2. Basic Linux Commands
 
 **Navigation**
-    '''bash
-    $ pwd
-    /home/riwaz/DevOps-Bootcamp/Day1
-    '''
+
+1. pwd: Prints the working Directory.
 
     '''bash
     $ pwd
     /home/riwaz/DevOps-Bootcamp/Day1
     '''
-    
 
+2. cd: Change the working Directory.
+
+    '''bash
+    $ cd DevOps-Bootcamp/Day1/
+    '''
+
+3. ls | ls -l: Lists all the files and subdirectories and -l to show lonf list.
+    '''bash
+    $ ls -l
+    total 12
+    drwxrwxrwx 2 riwaz riwaz 4096 Nov 17 14:47 Img
+    -rw-rw-rw- 1 riwaz riwaz 3024 Nov 17 15:38 Linux-Fundamentals.md
+    -rw-rw-rw- 1 riwaz riwaz 2623 Nov 17 14:51 SDLC.md
+    '''
 ** File Management**
 
