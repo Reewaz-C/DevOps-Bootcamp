@@ -49,3 +49,6 @@ Agile methodology is an SDLC model with an iterative and flexible approach to th
 5. Sprint Review: The team demonstrate the product to the clients or stakeholders for any feedback and improvements.
 
 6. Retrospective: The teams discuess further improvements for the next sprint.
+
+
+![SDLC Diagram](agile.avif)
