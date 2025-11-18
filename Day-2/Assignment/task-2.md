@@ -34,3 +34,6 @@
     $ sudo bash -c "apt list --installed >> /devops-labs/package.txt"
     ```
 ![Installed package](../Img/list_installed_package.png)
+
+
+![Installed package](../Img/list_installed_package1.png)
