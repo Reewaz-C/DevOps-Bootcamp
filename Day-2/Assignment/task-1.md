@@ -17,7 +17,7 @@ Here use have use -p flag while is used to create directories with multiple sub-
 Here cd command is used to traverse throught the directories.
 
 
-![tree Img](../Img/cd.png)
+![cd Img](../Img/cd.png)
 
 ## Copying README.md file to app2/ Directory
 
@@ -27,7 +27,7 @@ Here cd command is used to traverse throught the directories.
 Here we have used cp command to copy the README.md file to ap2 directory.
 
 
-![tree Img](../Img/cp.png)
+![cp Img](../Img/cp.png)
 
 ## Listing all the files in devops-labe directory with hidden files
 
@@ -36,4 +36,4 @@ Here we have used cp command to copy the README.md file to ap2 directory.
     ```
 Here we have used ls -al to list all the files including hidden files using -a which lists all the files including hidden files and -l will show in long list format.
 
-![tree Img](../Img/ls.png)
+![ls Img](../Img/ls.png)
