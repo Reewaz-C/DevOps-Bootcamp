@@ -2,6 +2,8 @@
 
 A Devops culture is a close collaboration and shared resopsibilities between the devlopment and the operations teams for efficient deployment and maintainance of quality software.
 
+[Devops Culture](../Img/DevOps_Culture.jpg)
+
 ## Key Aspects of DevOps Culture
 
 1. Shared responsibility:
