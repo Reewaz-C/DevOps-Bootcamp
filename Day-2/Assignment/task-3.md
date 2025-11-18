@@ -1,4 +1,4 @@
-# Metrics Calculation
+# Task 3: Metrics Calculation
 
 Given the following data for a team over one month:
 - Total deployments: 40
