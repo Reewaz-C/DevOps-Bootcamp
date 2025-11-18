@@ -7,6 +7,7 @@
     ```
 Here use have use -p flag while is used to create directories with multiple sub-directories.
 
+![tree Img](./Img/tree.png)
 
 ## Navigating to app1/ and creating README.md file
 
