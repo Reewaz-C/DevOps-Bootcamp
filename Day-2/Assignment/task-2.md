@@ -6,17 +6,22 @@
     $ sudo apt update
     ```
 
+![update](../Img/update_package.png)
+
 ## Install htop (System monitoring tool)
 
     ```bash
     $ sudo apt install htop -y
     ```
 
+![htop](../Img/htop.png)
+
 ## Checking if nginx is installed
 
     ```bash
     $ which nginx
     ```
+![nginx](../Img/nginx.png)
 
 ## If not installed 
 
@@ -28,4 +33,4 @@
     ```bash
     $ sudo bash -c "apt list --installed >> /devops-labs/package.txt"
     ```
-
+![Installed package](../Img/list_installed_package.png)
