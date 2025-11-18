@@ -15,7 +15,11 @@ Given the following data for a team over one month:
 
 ## Deployment Frequency 
 
-    Deployment Frequency= Total Deployments/Total workinf days
+Deployment frequency is the measurement of how often the code is deployed to the procduction.
+ 
+    Deployment Frequency= Total Deployments/Total working days
+
+As we know the total deployments are 40 and working days are 20.
 
     Deployment Frequecy = 40/20 = 2
 
@@ -23,37 +27,47 @@ Given the following data for a team over one month:
 
 ## Lead Time for Changes
 
+Lead time for change is the measurement of average time from code commit to deployement to production.
+
     Avg. time from code commit to production = 3
 
     So the lead time for change is 3 hours.
 
 ## Change Failure Rate
 
+Change in failure rate is percentage of deployments that cause failure in production.
+
     % of deployments causing produciton failure = (failed deployments/total deployments)*100
+
+As we know failed deployments is 6 and total deployments is 40.
 
     CFR = (6/40)*100
         = 15
     
-    The chage failure rate is 15%.
+    The change failure rate is 15%.
 
-## Mean Time to recovety (MTTR)
+## Mean Time to recovery (MTTR)
+
+Mean time to recovery is the avg. time needed to fix the system after failure.
 
     Time to restore service (MTTR) = recovery time/number of failed deployments
 
-    recovery time = 90+45+120+240+30+240
+    recovery time = 90+45+120+240+30+240 (from 6 incidents)
                   = 765 minutes or 12.75 hour
 
 
     MTTR = 12.75/6
          = 2.125 or 2 hour 7.5 minutes
 
-    So the MTTR is 2 hour 7.5 minutes
+    So the MTTR is 2 hour 7.5 minutes.
 
 ## Classifying based on DORA metrics
 
     Based on DORA metrics benchmarks the performance is categorized as Elite, high, medium or low.
 
 ### DORA Metrics Benchmarks
+
+Here we can see the benchmark for DORA and compare to our above case.
 
 ![DORA benchmark](../Img/DORA.png)
 
@@ -64,4 +78,6 @@ Given the following data for a team over one month:
 | Change failure rate   |  15%                  |  Elite - High      |
 | MTTR                  |  approx 2 hour        |  High              |
 
+## Conclusion
 
+As we can see from the DORA benchmarks that we gathered, we can say that the performance of the team is High but very close to Elite. The team can improve on the Lead time for change (< 1 hour) and MTTR (< 1 hour).  
