@@ -53,6 +53,10 @@ Given the following data for a team over one month:
 
     Based on DORA metrics benchmarks the performance is categorized as Elite, high, medium or low.
 
+### DORA Metrics Benchmarks
+
+![DORA benchmark](../Img/DORA.png)
+
 | Metrics               |  Perforamce           |  DORA benchmarks   |
 | --------------------- | -------------         | ------------------ |
 | Deployment Frequency  |  2 deployments per day|  Elite             |
