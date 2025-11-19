@@ -4,6 +4,8 @@
 
 ![User Add](../Img/useradd.png)
 
+![User Add](../Img/userpasswd.png)
+
 ## 2. Creating two groups
 
 ![Group create](../Img/groupadd.png)
