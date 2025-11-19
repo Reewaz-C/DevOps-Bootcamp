@@ -42,4 +42,4 @@
 
 ### Running the Script
 
-![script](../Img/script.png)
+![script](../Img/deploy.png)
