@@ -1,0 +1,155 @@
+# LINUX FUNDAMENTALS
+
+## Introduction
+
+Linux is an open-source operating systems that is known for being free, customizable, and secure, and it is used in a wide variety of devices, from smartphones and servers to supercomputers.
+
+### 1. Linux File System
+
+A Linux file system is a hierarchical, tree-like structure that organizes data on storage devices with everything stemming from the root directory (/).
+
+- / : Root directory or top directory. All other directories and files branch from here. Only the root user has write permission to this directory.
+
+- /bin: Contains essential User Binaries and executable programs that are essential for both the root user and all other users like ls, cp, and mv. 
+
+- /boot: Contains the files needed to boot the operating system, such as
+the Linux kernel and the bootloader configuration.
+
+- /dev:Contains files that represent hardware devices. The Linux kernel uses these files to communicate with devices such as hard drives
+
+- /etc: Stores host-specific, system-wide configuration files for
+applications and services like passwd.
+
+- /home: The location for home directories for regular users.
+
+- /lib:  Contains the Essential shared libraries and kernel modules required by the executable programs in /bin and /sbin.
+
+- /media: The default location for automatically mounting removable media, like USB drives and CDs, when they are inserted.
+
+- /mnt: The location for manually mounting temporary filesystems.
+
+- /opt: A directory for installing optional or third-party software packages that are not part of the standard system.
+
+- /root: The home directory for the root superuser, separate from other users' home directories.
+
+- /sbin: Contains executable programs used for system administration and maintenance that are typically reserved for the root user like init, and mount.
+
+- /tmp: Stores temporary files created by users and applications, which will be cleared out upon reboot.
+
+- /usr:  Universal System Resources. A secondary hierarchy for read-only user data, containing the majority of user utilities and applications.
+
+- /var: Stores files whose content is expected to change continuously, such as log files (/var/log)
+
+- /sys: A virtual filesystem that exposes kernel objects and their attributes to userspace.
+
+- /srv: Site-specific Data. Contains data for services provided by the system, such as web server content. 
+
+- /proc: Process Information. A virtual filesystem that provides a window into the kernel's process and system information, with a subdirectory for each running process.
+
+- /run:  Runtime Variable Data. A virtual filesystem that stores information about the running system since the last boot. 
+
+### 2. Basic Linux Commands
+
+**Navigation**
+
+1.  `pwd`: Prints the working Directory.
+
+    ```bash
+    $ pwd
+    /home/riwaz/DevOps-Bootcamp/Day1
+    ```
+
+2. `cd`: Change the working Directory.
+
+    ```bash
+    $ cd DevOps-Bootcamp/Day1/
+    ```
+
+3. `ls` | `ls -l`: Lists all the files and subdirectories and -l to show lonf list.
+
+    ```bash
+    $ ls -l
+    total 12
+    drwxrwxrwx 2 riwaz riwaz 4096 Nov 17 14:47 Img
+    -rw-rw-rw- 1 riwaz riwaz 3024 Nov 17 15:38 Linux-Fundamentals.md
+    -rw-rw-rw- 1 riwaz riwaz 2623 Nov 17 14:51 SDLC.md
+    ```
+
+**File Management**
+
+1. `touch file1`: Creats a file named "file1".
+
+    ```bash
+    $ touch file1
+    ```
+2. `mkdir folder`: Creats a directory.
+
+    ```bash
+    $ mkdir folder
+    ```
+
+3. `cp`: Copies files
+
+    ```bash
+    $ cp file1 /home/user/
+    ```
+
+4. `mv`: Moves or rename files
+
+    ```bash
+    $ mv file1 file2
+    ```
+
+### 3. User Permissions
+
+Linux file permissions are a fundamental aspect of its security model, controlling access to files and directories for different users and groups.
+
+**Permission Types**
+
+- r: Read (4)
+- w: Write (2)
+- x: Execute (1)
+
+**Changing Permisssions**
+
+    ```bash
+    $ chmod 755 file1
+    ```
+
+**Changing Ownership**
+
+    ```bash
+    $ chown riwaj:devgroup file1
+    ```
+
+### 4. Network commands
+
+- ip addr: shows ip information
+    
+    ```bash
+    $ ip addr
+    ```
+
+- ping: Check the connectivity.
+    
+    ```bash
+    $ ping -c 4 8.8.8.8
+    ```
+
+- netstat: Displays network connections, routing tables, listening ports.
+
+    ```bash
+    $ netstat -tuln
+    ```
+
+- telnet: It is a network protocol that allows us to connect and communicate with remote server over TCP/IP networl. Used to test connectivity to a TCP port on a remote server.
+
+    ```bash
+    $ telnet netflix.com 80
+    ```
+
+- ss: ss command is a tool used to dump socket statistics and displays information in similar to netstat.
+
+    ```bash
+    $ ss -tuln
+    ```
