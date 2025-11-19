@@ -2,15 +2,15 @@
 
 ## Setting umask 
 
-### Editing /etc/profile
+### 1.Editing /etc/profile
 
 ![umask](../Img/etc.png)
 
 
-### Adding umask 
+### 2. Adding umask 
 
 ![umask](../Img/umask.png)
 
 
-### Reload environment
+### 3. Reload environment
 ![umask](../Img/source.png)
