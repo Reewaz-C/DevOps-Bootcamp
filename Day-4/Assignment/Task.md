@@ -2,9 +2,9 @@
 
 ## 1. creating bash file
 
-    ```bash
-    vim CPU.sh
-    ```
+```bash
+vim CPU.sh
+```
 
 ## 2. Creating the script
 
