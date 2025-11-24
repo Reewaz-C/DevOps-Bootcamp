@@ -1,0 +1,16 @@
+===== SERVER HARDENING REPORT =====
+Date: Mon Nov 24 00:28:29 UTC 2025
+
+Root login via SSH: DISABLED
+SSH port changed to 2222
+SSH reloaded
+
+Fail2ban installed
+Fail2ban configured and restarted
+
+Service apache2: DISABLED
+Service cups: DISABLED
+Service bluetooth: DISABLED
+
+Firewall configured and enabled
+===== HARDENING COMPLETE =====
