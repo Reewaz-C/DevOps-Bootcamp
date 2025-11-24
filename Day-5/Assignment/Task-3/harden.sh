@@ -5,7 +5,7 @@ REPORT="/home/riwaz/DevOps-Bootcamp/Day-5/Assignment/Task-3/harden_report.txt"
 # Clear previous report
 > $REPORT
 
-echo "===== SERVER HARDENING REPORT =====" | tee -a $REPORT
+echo "SERVER HARDENING REPORT" | tee -a $REPORT
 echo "Date: $(date)" | tee -a $REPORT
 echo "" | tee -a $REPORT
 
@@ -43,8 +43,7 @@ echo "Fail2ban configured and restarted" | tee -a $REPORT
 echo "" | tee -a $REPORT
 
 # 4. Disable unused services
-SERVICES=("apache2" "cups" "bluetooth")
-for service in "${SERVICES[@]}"; do
+for service in apache2 cups bluetooth; do
     systemctl stop $service 2>/dev/null
     systemctl disable $service 2>/dev/null
     echo "Service $service: DISABLED" | tee -a $REPORT
