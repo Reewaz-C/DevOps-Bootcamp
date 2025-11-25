@@ -82,3 +82,16 @@ for service in services:
 
 with open(REPORT, "a") as file:
     file.write(f"Service {service}: DISABLED\n\n")
+
+# ----------  Update Firewall   ---------------------------
+subprocess.run(["ufw", "allow", "80/tcp"], check=True)
+subprocess.run(["ufw", "allow", "443/tcp"], check=True)
+
+subprocess.run(["ufw", "--force", "enable"], check=True)
+
+with open(REPORT, "a") as file:
+    file.write(f"Firewall configured and enabled")
+
+# ----------  HARDENING COMPLETE   ---------------------------
+with open(REPORT, "a") as file:
+    file.write(f"Hardening Completed and report saved !!!")
