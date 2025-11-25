@@ -17,6 +17,7 @@ RESET = "\033[0m"
 current_date = datetime.now()
 REPORT = "harden_report.txt"
 New_port = "2222"
+services = ["apache2", "cups", "bluetooth"]
 
 # ----------  HEADRER   ---------------------------
 with open(REPORT, "a") as file:
@@ -67,7 +68,17 @@ with open("/etc/fail2ban/jail.local", "w") as file:
     file.write(content)
 with open(REPORT, "a") as file:
     file.write("Faile2ban jail.local configured.")
+
 # ------------ Faile2ban restart -----------------------------
 subprocess.run(["sudo", "systemctl", "restart", "fail2ban"], check=True)
 with open(REPORT, "a") as file:
     file.write("Fail2ban is restarted !!\n\n")
+
+# ----------  Disable unused services   ---------------------------
+
+for service in services:
+    # Stop service
+    subprocess.run(["systemctl", "stop", service], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
+with open(REPORT, "a") as file:
+    file.write(f"Service {service}: DISABLED\n\n")

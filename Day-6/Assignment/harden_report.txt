@@ -13,3 +13,20 @@ Fail2ban is installed !!!
 
 Faile2ban jail.local configured.Fail2ban is restarted !!
 
+SERVER HARDENING REPORT
+========================
+
+[36mDate:[31m 2025-11-25 03:34:21.162055
+
+Root login via SSH: DISABLED
+
+SSH port changed to 2222
+
+SSH is reloaded !!
+
+Fail2ban is installed !!!
+
+Faile2ban jail.local configured.Fail2ban is restarted !!
+
+Service bluetooth: DISABLED
+
