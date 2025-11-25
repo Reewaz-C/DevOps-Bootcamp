@@ -1,4 +1,15 @@
 SERVER HARDENING REPORT
 ========================
 
-[36mDate:[31m 2025-11-24 14:07:03.370713
+[36mDate:[31m 2025-11-25 00:57:18.006532
+
+Root login via SSH: DISABLED
+
+SSH port changed to 2222
+
+SSH is reloaded !!
+
+Fail2ban is installed !!!
+
+Faile2ban jail.local configured.Fail2ban is restarted !!
+
