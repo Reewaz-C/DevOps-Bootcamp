@@ -110,4 +110,5 @@ Checksum: ./release_packages/myapp-2025.11.26-1557.tar.gz.sha256
 sha256sum -c release_packages/myapp-2025.11.26-1557.tar.gz.sha256
 ./release_packages/myapp-2025.11.26-1557.tar.gz: OK
 ```
-
+## Screenshot
+![release](../Img/release.png)
