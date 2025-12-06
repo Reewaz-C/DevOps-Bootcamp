@@ -46,25 +46,61 @@ Basic HTML file of the portfolio site.
 </head>
 <body>
 
-<div class="container">
-    <h1>Hello, I’m <span class="name">Riwaj Chipalu</span></h1>
-    <p class="subtitle">DevOps • Cloud • Automation</p>
+<!-- Navigation Bar -->
+<nav>
+    <div class="logo">Riwaj<span>Chipalu</span></div>
+    <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-    <img src="Img/passport.jpg" class="profile-img">
+<!-- Hero Section -->
+<header class="hero">
+    <div class="hero-text">
+        <h1>Hello, I’m <span>Riwaj Chipalu</span></h1>
+        <p>DevOps • Cloud • Automation • Security</p>
+        <a href="Img/Riwaj Chipalu.pdf" download class="cv-button">Download My CV</a>
+    </div>
+    <img src="Img/passport.jpg" class="hero-img">
+</header>
 
-    <p class="about">
-        I’m passionate about cloud infrastructure, DevOps automation, and building secure,
-        scalable systems. This mini-portfolio runs entirely inside a Docker container.
+<!-- About Section -->
+<section id="about" class="about-section">
+    <h2>About Me</h2>
+    <p>
+        I am passionate about cloud infrastructure, DevOps pipeline automation, and building secure scalable systems.
+        I love working with AWS, Jenkins, Docker, Kubernetes and Terraform to create real-world automation projects.
     </p>
+</section>
 
+<!-- Projects Section -->
+<section id="projects" class="projects-section">
     <h2>Featured Project</h2>
-    <img src="Img/project.jpeg" class="project-img">
-    <p class="project-desc">
-        A CI/CD pipeline project using Jenkins, Docker, SonarQube, OWASP and trivy.
-    </p>
 
-    <a href="Img/Riwaj Chipalu.pdf" download class="cv-button">Download My CV</a>
-</div>
+    <div class="project-card">
+        <img src="Img/project.jpeg" alt="Project Image">
+        <div class="project-content">
+            <h3>CI/CD DevSecOps Pipeline</h3>
+            <p>
+                A fully automated DevSecOps pipeline using Jenkins, Docker, SonarQube, OWASP Dependency Check,
+                Trivy, and containerized deployments.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+    <h2>Contact Me</h2>
+    <p>Email: <strong>riwazu23@gmail.com</strong></p>
+    <p>Location: Balaju, Kathmandu</p>
+</section>
+
+<footer>
+    <p>© 2025 Riwaj Chipalu • Portfolio</p>
+</footer>
 
 </body>
 </html>
@@ -74,49 +110,124 @@ Basic HTML file of the portfolio site.
 
 ```bash
 body {
-    font-family: Arial, sans-serif;
-    background: #f7f7f7;
     margin: 0;
-    padding: 0;
-    text-align: center;
+    font-family: Arial, sans-serif;
+    background: #0d1117;
+    color: #e6e6e6;
 }
 
-.container {
-    width: 60%;
-    margin: auto;
-    padding: 40px;
-    background: white;
-    margin-top: 40px;
-    border-radius: 10px;
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    background: #161b22;
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
 }
 
-.name { color: #0078ff; }
-
-.profile-img {
-    width: 180px;
-    border-radius: 50%;
-    margin: 20px 0;
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4ea1ff;
 }
 
-.project-img {
-    width: 80%;
-    border-radius: 10px;
-    margin-top: 20px;
+nav .logo span {
+    color: #fff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #e6e6e6;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    color: #4ea1ff;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 100px;
+    align-items: center;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+}
+
+.hero-text h1 span {
+    color: #4ea1ff;
 }
 
 .cv-button {
     display: inline-block;
-    padding: 12px 20px;
-    background: #0078ff;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
     margin-top: 20px;
-    font-size: 18px;
+    background: #4ea1ff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .cv-button:hover {
-    background: #005fcc;
+    background: #74b8ff;
+}
+
+.hero-img {
+    width: 280px;
+    border-radius: 12px;
+    border: 3px solid #4ea1ff;
+}
+
+/* Section Styling */
+section {
+    padding: 60px 100px;
+}
+
+h2 {
+    color: #4ea1ff;
+}
+
+/* Project Card */
+.project-card {
+    display: flex;
+    background: #161b22;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+.project-card img {
+    width: 250px;
+    height: 160px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+/* Contact Section */
+.contact-section p {
+    font-size: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #161b22;
+    margin-top: 40px;
 }
 ```
 
