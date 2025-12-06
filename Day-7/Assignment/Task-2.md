@@ -3,7 +3,7 @@
 ## Description
 
 You need to implement a **log rotation system** on your server *where logs older than 30 days are deleted, and a new log file is created every day.* 
->This should be applied to application logs in `/var/log/app_logs/`.
+>This should be applied to application logs in `/var/log/myapp/`.
 
 ### Requirements:
 
