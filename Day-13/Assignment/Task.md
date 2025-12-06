@@ -90,3 +90,9 @@ docker compose -f docker-compose.yaml up -d
 ## Verifying the application via browser
 
 ![alt text](Img/app.py.png)
+
+## Verifying status when the postgres and redis are stopped
+
+![alt text](Img/dockerstop.png)
+
+![alt text](Img/dockerdown.png)
