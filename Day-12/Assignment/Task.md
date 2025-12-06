@@ -12,7 +12,7 @@
 
 ## File Structure
 
-![alt text](images/image.png) 
+![alt text](Img/porttree.png) 
 
 ## DOckerfile
 
@@ -154,7 +154,7 @@ curl localhost
 
 ### 3. Via Browser
 
-![alt text](images/image.png)
+![alt text](Img/portfolio.png)
 
 ## Push the Docker Image to DockerHub
 
