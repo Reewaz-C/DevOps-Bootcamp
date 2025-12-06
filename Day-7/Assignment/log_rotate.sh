@@ -1,30 +1,39 @@
 #!/bin/bash
 
-
+# Directory for log files
 LOG_DIR="/var/log/myapp"
-LOG_NAME="myapp.log"
+LOG_NAME="myapp"
 
-# Keep logs for 7 days
-RETENTION_DAYS=7
+# Retention period in days
+RETENTION_DAYS=30
 
-# Create log directory if missing
+# Ensure the log directory exists
 mkdir -p "$LOG_DIR"
 
-# Today's log file
+# Today's date (YYYY-MM-DD)
 TODAY=$(date +%F)
-TODAY_LOG="${LOG_DIR}/${LOG_NAME}.${TODAY}"
 
-# 1) Create today's log file if missing
+# Today's log file
+TODAY_LOG="${LOG_DIR}/${LOG_NAME}_${TODAY}.log"
+
+#############################
+# 1) Delete logs older than retention
+#############################
+find "$LOG_DIR" -type f -name "${LOG_NAME}_*.log"    -mtime +$RETENTION_DAYS -exec rm -f {} \;
+find "$LOG_DIR" -type f -name "${LOG_NAME}_*.log.gz" -mtime +$RETENTION_DAYS -exec rm -f {} \;
+
+#############################
+# 2) Compress old log files (except today's)
+#############################
+find "$LOG_DIR" -type f -name "${LOG_NAME}_*.log" ! -name "$(basename "$TODAY_LOG")" -exec gzip -f {} \;
+
+#############################
+# 3) Ensure today's log file exists
+#############################
 if [ ! -f "$TODAY_LOG" ]; then
     touch "$TODAY_LOG"
 fi
 
-# 2) Compress all log files except today
-find "$LOG_DIR" -type f -name "${LOG_NAME}.*" ! -name "$(basename "$TODAY_LOG")" -exec gzip -f {} \;
-
-# 3) Delete compressed logs older than the retention period
-find "$LOG_DIR" -type f -name "${LOG_NAME}.*.gz" -mtime +$RETENTION_DAYS -exec rm -f {} \;
-
-echo "Log rotation completed."
-echo "Current log file: $TODAY_LOG"
+echo "Log rotation complete."
+echo "Today's log: $TODAY_LOG"
 
