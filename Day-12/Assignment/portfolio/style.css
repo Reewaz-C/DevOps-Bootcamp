@@ -1,46 +1,121 @@
 body {
-    font-family: Arial, sans-serif;
-    background: #f7f7f7;
     margin: 0;
-    padding: 0;
-    text-align: center;
+    font-family: Arial, sans-serif;
+    background: #0d1117;
+    color: #e6e6e6;
 }
 
-.container {
-    width: 60%;
-    margin: auto;
-    padding: 40px;
-    background: white;
-    margin-top: 40px;
-    border-radius: 10px;
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    background: #161b22;
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
 }
 
-.name { color: #0078ff; }
-
-.profile-img {
-    width: 180px;
-    border-radius: 50%;
-    margin: 20px 0;
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4ea1ff;
 }
 
-.project-img {
-    width: 80%;
-    border-radius: 10px;
-    margin-top: 20px;
+nav .logo span {
+    color: #fff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #e6e6e6;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    color: #4ea1ff;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 100px;
+    align-items: center;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+}
+
+.hero-text h1 span {
+    color: #4ea1ff;
 }
 
 .cv-button {
     display: inline-block;
-    padding: 12px 20px;
-    background: #0078ff;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
     margin-top: 20px;
-    font-size: 18px;
+    background: #4ea1ff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .cv-button:hover {
-    background: #005fcc;
+    background: #74b8ff;
+}
+
+.hero-img {
+    width: 280px;
+    border-radius: 12px;
+    border: 3px solid #4ea1ff;
+}
+
+/* Section Styling */
+section {
+    padding: 60px 100px;
+}
+
+h2 {
+    color: #4ea1ff;
+}
+
+/* Project Card */
+.project-card {
+    display: flex;
+    background: #161b22;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+.project-card img {
+    width: 250px;
+    height: 160px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+/* Contact Section */
+.contact-section p {
+    font-size: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #161b22;
+    margin-top: 40px;
 }
 
