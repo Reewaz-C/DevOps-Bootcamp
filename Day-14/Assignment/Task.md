@@ -34,4 +34,28 @@ docker ps
 
 ![alt text](../Img/Dockerapp.png)
 
+## 6. Updating the app version
 
+### 6.1 Version updated in .env file
+
+![alt text](../Img/envupdate.png)
+
+### 6.2 Building new docker Image with updated app version
+
+![alt text](../Img/Dockerbuildupdate.png) 
+
+### 6.3 Verification of built image with updated tag
+
+![alt text](../Img/Dockerimageupdate.png)
+
+### 6.4 Running the container with updated Image
+
+![alt text](../Img/Dockerrunupdate.png)
+
+### 6.5 Verification of updated application version
+
+```bash
+curl localhost
+```
+
+![alt text](../Img/DockerappV2.png)
