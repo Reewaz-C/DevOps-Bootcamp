@@ -1,6 +1,4 @@
-# Untitled
-
-# **Riwaj- Install and Configure AWS CLI and list created S3 Bucket(s); and harden the credentials** (1)
+# **Riwaj- Install and Configure AWS CLI and list created S3 Bucket(s); and harden the credentials**
 
 ## 1. Installing AWS CLI
 
