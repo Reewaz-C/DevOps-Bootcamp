@@ -1,4 +1,8 @@
-# **Riwaj- Install and Configure AWS CLI and list created S3 Bucket(s); and harden the credentials**
+# Task Day 15
+
+- **Install and Configure AWS CLI*
+- **List created S3 Bucket**
+- **Harden the credentials**
 
 ## 1. Installing AWS CLI
 
