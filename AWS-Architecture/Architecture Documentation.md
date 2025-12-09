@@ -1,7 +1,7 @@
-# AWS 3-Tier Architecture (Web, App, DB) -- High Availability Design
+# AWS 3-Tier Architecture (Web, App, DB)
 
 
-## 📌 Overview
+## Overview
 
 This is a **highly available, secure, and scalable 3-tier architecture**
 deployed inside an AWS VPC.\
@@ -14,19 +14,17 @@ The system is divided into:
 All tiers span **two Availability Zones (AZs)** for reliability and
 fault tolerance.
 
-------------------------------------------------------------------------
 
-## 🏗 Architecture Components
+## Architecture Components
 
-### 🟦 AWS Cloud, Region, VPC
+### AWS Cloud, Region, VPC
 
 -   **AWS Cloud:** Represents AWS environment.
 -   **Region:** The geographic location hosting your resources.
 -   **VPC:** Your isolated private network where all resources run.
 
-------------------------------------------------------------------------
 
-## 🌍 Internet Layer
+## Internet Layer
 
 ### ✔ Internet Gateway (IGW)
 
@@ -36,9 +34,8 @@ Allows inbound/outbound internet traffic for **public subnets**.
 
 Distributes incoming user traffic across **Web Tier** EC2 instances.
 
-------------------------------------------------------------------------
 
-## 🟩 Web Tier (Public Tier)
+## Web Tier (Public Tier)
 
 ### ✔ Public Subnets
 
@@ -57,9 +54,8 @@ Run NGINX/Apache or front-end applications.
 -   Allows HTTP/HTTPS from the internet.
 -   Allows outbound traffic to the App Tier.
 
-------------------------------------------------------------------------
 
-## 🟧 Application Tier (Private Tier)
+## Application Tier (Private Tier)
 
 ### ✔ Private Subnets
 
@@ -81,9 +77,8 @@ Ensures scalability based on backend utilization.
 
 Allows traffic only from Web Tier security group.
 
-------------------------------------------------------------------------
 
-## 🟦 Database Tier (Private & Secure)
+## Database Tier (Private & Secure)
 
 ### ✔ Private Subnets (DB Tier)
 
@@ -101,14 +96,12 @@ Used for: - High availability - Failover - Read optimization
 
 Allows traffic only from App Tier.
 
-------------------------------------------------------------------------
 
-## 🔀 NAT Gateway 
+## NAT Gateway 
 
 ### ✔ Purpose
 
-Provides **outbound internet** access for private subnets (App/DB)\
-e.g., for updates, package downloads, API calls.
+Provides **outbound internet** access for private subnets (App/DB)
 
 ### ✔ Placement
 
@@ -119,17 +112,15 @@ e.g., for updates, package downloads, API calls.
 
 Best practice: **One NAT per AZ** to prevent cross-AZ latency/failure.
 
-------------------------------------------------------------------------
 
-## 🗂 Availability Zones
+## Availability Zones
 
 Resources are duplicated across: - **AZ 1A** - **AZ 1B**
 
 This ensures high availability and fault tolerance for all tiers.
 
-------------------------------------------------------------------------
 
-## 🔒 Security Model
+## Security Model
 
 ### Security Groups enforce:
 
@@ -139,9 +130,8 @@ This ensures high availability and fault tolerance for all tiers.
 
 This ensures strong isolation & least-privilege access.
 
-------------------------------------------------------------------------
 
-## 📈 Summary
+## Summary
 
 This architecture provides:
 
