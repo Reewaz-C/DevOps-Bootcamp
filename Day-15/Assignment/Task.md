@@ -1,6 +1,6 @@
 # Task Day 15
 
-- **Install and Configure AWS CLI*
+- **Install and Configure AWS CLI**
 - **List created S3 Bucket**
 - **Harden the credentials**
 
