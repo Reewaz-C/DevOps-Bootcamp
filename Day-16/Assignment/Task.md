@@ -1,0 +1,45 @@
+# PaaS - Deploy a Nodejs app  in AWS ElasticBean
+
+This project generates a static HTML website using Node.js and builds it using a **Dockerfile.**
+
+The  application is deployed to **AWS Elastic Beanstalk (EB).**
+
+## Project structure
+
+![{CC2F537F-EFA2-4D7F-B85E-70F25F9C6026}.png](../Img/CC2F537F-EFA2-4D7F-B85E-70F25F9C6026.png)
+
+## Building a Docker Image
+
+![{CE9A788F-33FA-45D7-9624-CFF3D1DA8A50}.png](../Img/CE9A788F-33FA-45D7-9624-CFF3D1DA8A50.png)
+
+![{25CEFEEC-6B01-475C-8B32-712F637C9B7C}.png](../Img/25CEFEEC-6B01-475C-8B32-712F637C9B7C.png)
+
+## Installing pipx
+
+![{09DD30E0-CD4F-4E08-8433-88B0F77A5A39}.png](../Img/09DD30E0-CD4F-4E08-8433-88B0F77A5A39.png)
+
+## Installing awsebcli
+
+![{9047FBD0-FB7A-42BE-B6FF-9F3BB97679C0}.png](../Img/9047FBD0-FB7A-42BE-B6FF-9F3BB97679C0.png)
+
+## Initializing Elastic Beanstalk
+
+![{82936155-453D-4B8B-88D4-0A5A439A94DA}.png](../Img/82936155-453D-4B8B-88D4-0A5A439A94DA.png)
+
+## Application created in Elastic Beanstalk but it does not contain anything yet
+
+![{4DE2C99D-9CCC-43C9-9F8B-ADEB7D0FE48E}.png](../Img/4DE2C99D-9CCC-43C9-9F8B-ADEB7D0FE48E.png)
+
+![{764C5A8D-00B8-4B62-A259-B591F843A33E}.png](../Img/764C5A8D-00B8-4B62-A259-B591F843A33E.png)
+
+## Creating Environment
+
+![{9A1CFB1D-47E5-4ED8-82C1-E033CC05B4DB}.png](../Img/9A1CFB1D-47E5-4ED8-82C1-E033CC05B4DB.png)
+
+## Verifying the deployment
+
+![{F35DDE2E-25BF-40E5-A5EA-07967713C35F}.png](../Img/F35DDE2E-25BF-40E5-A5EA-07967713C35F.png)
+
+![{391D1682-0D6B-4C84-BF3C-F95535045BD3}.png](../Img/391D1682-0D6B-4C84-BF3C-F95535045BD3.png)
+
+![{9CEFC5F7-67D0-4776-B63F-D7F3BD19D1AC}.png](../Img/9CEFC5F7-67D0-4776-B63F-D7F3BD19D1AC.png)
