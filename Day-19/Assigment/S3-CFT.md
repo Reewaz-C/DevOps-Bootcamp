@@ -12,12 +12,38 @@ Description: CloudFormation template to create a s3 bucket as secure as possible
 #     Description: ARN of the IAM User allowed to access the bucket
 
 Resources:
+  S3BUCKETLOGS:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      BucketName: riwajs3access_logbucket986598659865
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        PublicAccessBlockConfiguration: true
+        RestrictPublicBuckets: true
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+            SSEAlgorithm: AES256
+      VersioningConfiguration:
+        Status: Enabled
+      OwnershipControls:
+        Rules:
+          - ObjectOwnership:BucketOwnerEnforced
+      Tags:
+        - Key: Name
+          Value: riwajs3access_logbucket
+        - Key: Environment
+          Value: Dev
   S3BUCKET:
     Type: AWS::S3::Bucket
     DeletionPolicy: Retain
     UpdateReplacePolicy: Retain
     Properties:
-      BucketName: riweajs3bucket986598659865
+      BucketName: riwajs3bucket98659865986500
+
       PublicAccessBlockConfiguration:
         BlockPublicAcls: true
         BlockPublicPolicy: true
