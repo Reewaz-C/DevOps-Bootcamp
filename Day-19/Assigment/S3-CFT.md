@@ -22,22 +22,38 @@ Resources:
       PublicAccessBlockConfiguration:
         BlockPublicAcls: true
         BlockPublicPolicy: true
-        PublicAccessBlockConfiguration: true
+        IgnorePublicAcls: true
         RestrictPublicBuckets: true
       BucketEncryption:
         ServerSideEncryptionConfiguration:
           - ServerSideEncryptionByDefault:
-            SSEAlgorithm: AES256
+              SSEAlgorithm: AES256
       VersioningConfiguration:
         Status: Enabled
       OwnershipControls:
         Rules:
-          - ObjectOwnership:BucketOwnerEnforced
+          - ObjectOwnership: BucketOwnerEnforced
       Tags:
         - Key: Name
           Value: riwajs3access_logbucket
         - Key: Environment
           Value: Dev
+  S3BucketLogPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref S3BUCKETLOGS
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Sid: AllowS3ServerAccessLogs
+            Effect: Allow
+            Principal:
+              Service: logging.s3.amazonaws.com
+            Action: s3:PutObject
+            Resource: !Sub 'arn:aws:s3:::${S3BUCKETLOGS}/*'
+            Condition:
+              StringEquals:
+                s3:x-amz-acl: bucket-owner-full-control
   S3BUCKET:
     Type: AWS::S3::Bucket
     DeletionPolicy: Retain
@@ -62,6 +78,9 @@ Resources:
       OwnershipControls:
         Rules:
           - ObjectOwnership: BucketOwnerEnforced
+      LoggingConfiguration:
+        DestinationBucketName: !Ref S3BUCKETLOGS
+        LogFilePrefix: access_logs/
       Tags:
         - Key: Name
           Value: Secureriwajbucket
@@ -92,8 +111,10 @@ Resources:
             Action: 's3:PutObject'
             Resource:
               - !Sub "arn:aws:s3:::${S3BUCKET}/*"
+            Condition:
+              StringNotEquals:
+                s3:x-amz-server-side-encryption: AES256
             
-  
           # - Sid: AllowSpecificIAMUserAccess
           #   Effect: Allow
           #   Principal:
@@ -111,6 +132,9 @@ Outputs:
     Description: Secure S3 Bucket ARN
     Value: !GetAtt S3BUCKET.Arn
 
+  AccessLogsBucket:
+    Description: S3 Access Log Bucket Name
+    Value: !Ref S3BUCKETLOGS
 ```
 
 ## Block 1: Parameters
