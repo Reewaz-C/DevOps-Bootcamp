@@ -7,27 +7,42 @@ S3-CFT.yaml
 AWSTemplateFormatVersion: "2010-09-09"
 Description: CloudFormation template to create a s3 bucket as secure as possible
 
-# Parameters:
+Parameters:
+  MainBucketName:
+    Type: String
+    Description: Name of Main S3 bucket
+    AlloedPattern: ^[a-z0-9.-]+$'
+    ConstrainDescription: Bucket name should be lowecase
+  
+  LogBucketName:
+    Type: String
+    Description: Name of Log Bucket
+    AlloedPattern: ^[a-z0-9.-]+$'
+    ConstrainDescription: Bucket name should be lowecase
 #   IAMUserArn:
 #     Type: String
 #     Description: ARN of the IAM User allowed to access the bucket
 
 Resources:
+#S3 bucket for logging
   S3BUCKETLOGS:
     Type: AWS::S3::Bucket
     DeletionPolicy: Retain
     UpdateReplacePolicy: Retain
     Properties:
-      BucketName: riwajs3access_logbucket986598659865
+      BucketName: !Ref LogBucketName
+#Public Access Block configuration
       PublicAccessBlockConfiguration:
         BlockPublicAcls: true
         BlockPublicPolicy: true
         IgnorePublicAcls: true
         RestrictPublicBuckets: true
+ #Bucket Encryption       
       BucketEncryption:
         ServerSideEncryptionConfiguration:
           - ServerSideEncryptionByDefault:
               SSEAlgorithm: AES256
+ #Version Enabling and Ownership enforced             
       VersioningConfiguration:
         Status: Enabled
       OwnershipControls:
@@ -38,6 +53,7 @@ Resources:
           Value: riwajs3access_logbucket
         - Key: Environment
           Value: Dev
+# Bucket policy for logging bucket "S3BUCKETLOGS"
   S3BucketLogPolicy:
     Type: AWS::S3::BucketPolicy
     Properties:
@@ -45,22 +61,35 @@ Resources:
       PolicyDocument:
         Version: '2012-10-17'
         Statement:
+# Deny Insecure Transport SSL
+          - Sid: DenyInsecureTransport
+            Effect: Deny
+            Principal: '*'
+            Action: 's3:*'
+            Resource:
+              - !Sub 'arn:aws:s3:::${S3BUCKETLOGS}'
+              - !Sub 'arn:aws:s3:::${S3BUCKETLOGS}/*'
+            Condition:
+              Bool:
+                aws:SecureTransport: false
+# Enabling Server Access Logging
           - Sid: AllowS3ServerAccessLogs
             Effect: Allow
             Principal:
               Service: logging.s3.amazonaws.com
             Action: s3:PutObject
-            Resource: !Sub 'arn:aws:s3:::${S3BUCKETLOGS}/*'
+            Resource: !Sub 'arn:aws:s3:::${S3BUCKETLOGS}/access_logs/*'
             Condition:
               StringEquals:
                 s3:x-amz-acl: bucket-owner-full-control
+# Main Bucket
   S3BUCKET:
     Type: AWS::S3::Bucket
     DeletionPolicy: Retain
     UpdateReplacePolicy: Retain
+    DependsOn: S3BUCKETLOGS
     Properties:
-      BucketName: riwajs3bucket98659865986500
-
+      BucketName: !Ref MainBucketName
       PublicAccessBlockConfiguration:
         BlockPublicAcls: true
         BlockPublicPolicy: true
@@ -78,6 +107,7 @@ Resources:
       OwnershipControls:
         Rules:
           - ObjectOwnership: BucketOwnerEnforced
+ # Logging configuration for main bucket         
       LoggingConfiguration:
         DestinationBucketName: !Ref S3BUCKETLOGS
         LogFilePrefix: access_logs/
@@ -86,7 +116,7 @@ Resources:
           Value: Secureriwajbucket
         - Key: Environment
           Value: Dev
-
+# Https Bucket policy TLS and Encryption enforced
   HttpsBucketPolicy:
     Type: AWS::S3::BucketPolicy
     Properties:
@@ -103,7 +133,7 @@ Resources:
               - !Sub "arn:aws:s3:::${S3BUCKET}/*"
             Condition:
               Bool:
-                'aws:SecureTransport': false
+                aws:SecureTransport: false
           
           - Sid: DenynUnencryptedObjectUploads
             Effect: Deny
