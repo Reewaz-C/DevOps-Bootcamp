@@ -11,14 +11,14 @@ Parameters:
   MainBucketName:
     Type: String
     Description: Name of Main S3 bucket
-    AlloedPattern: ^[a-z0-9.-]+$'
-    ConstrainDescription: Bucket name should be lowecase
+    AllowedPattern: '^[a-z0-9][a-z0-9.-]{1,61}[a-z0-9]$'
+    ConstraintDescription: Bucket name should be lowecase
   
   LogBucketName:
     Type: String
     Description: Name of Log Bucket
-    AlloedPattern: ^[a-z0-9.-]+$'
-    ConstrainDescription: Bucket name should be lowecase
+    AllowedPattern: '^[a-z0-9][a-z0-9.-]{1,61}[a-z0-9]$'
+    ConstraintDescription: Bucket name should be lowecase
 #   IAMUserArn:
 #     Type: String
 #     Description: ARN of the IAM User allowed to access the bucket
