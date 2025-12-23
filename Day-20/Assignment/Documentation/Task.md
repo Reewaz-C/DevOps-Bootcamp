@@ -253,7 +253,7 @@ resource "aws_s3_bucket_policy" "TLS_main" {
 }
 ```
 
-Terraform block & provides
+## Terraform block & provides
 
 The terraform {} block configures Terraform itself, including which providers to install, and which version of Terraform to use to provision your infrastructure. 
 
@@ -261,7 +261,7 @@ The **`provider`** block configures options that apply to all resources manage
 
 ![{83570D78-23E0-4321-AD78-00A2C9293AB8}.png](83570D78-23E0-4321-AD78-00A2C9293AB8.png)
 
-Data Source for AMI
+## Data Source for AMI
 
 **Data Source** is a way to fetch information that already exists in your cloud provider (AWS) but wasn't necessarily created by our current Terraform code.
 
@@ -269,7 +269,7 @@ Data Source for AMI
 
 ![{249F91C8-18BC-4C69-9E92-0EEDD39B26BB}.png](249F91C8-18BC-4C69-9E92-0EEDD39B26BB.png)
 
-Defining resources for Ec2 instance
+## Defining resources for Ec2 instance
 
 Here in resource block we configure all the necessary components in order to create our EC2 instance such as VPC, IGW, route table, public IP, security group, etc.
 
@@ -277,21 +277,21 @@ Here in resource block we configure all the necessary components in order to cre
 
 ![{D01D2872-44CA-43E1-9F47-81A413EA768E}.png](D01D2872-44CA-43E1-9F47-81A413EA768E.png)
 
-Creating S3 bucket for logging
+## Creating S3 bucket for logging
 
 Here we have create s3 bucket for logging.
 
 ![{990B584F-A5C0-42F7-9493-2691E5176012}.png](990B584F-A5C0-42F7-9493-2691E5176012.png)
 
-Blocking public access in S3 bucket and enabling encryption
+## Blocking public access in S3 bucket and enabling encryption
 
 ![{2CE21D58-C076-4191-8236-D5946DCC0FEE}.png](2CE21D58-C076-4191-8236-D5946DCC0FEE.png)
 
-Enabling versioning and Ownership controls
+## Enabling versioning and Ownership controls
 
 ![{9C574DAB-F8B0-436C-8154-53C38E16F145}.png](9C574DAB-F8B0-436C-8154-53C38E16F145.png)
 
-Configuring bucket policy
+## Configuring bucket policy
 
 Here the data source fetches the account ID of the current user and we have defined bucket policy for the log bucket.
 
@@ -299,26 +299,38 @@ Here the data source fetches the account ID of the current user and we have defi
 
 ![{7B1A682F-98A2-4E20-8D2D-0AC71D07D550}.png](7B1A682F-98A2-4E20-8D2D-0AC71D07D550.png)
 
-Creating our main S3 bucket
+## Creating our main S3 bucket
 
 Here we have created main  s3 bucket .
 
 ![{4C99E49F-B17E-4A12-97EB-A74BEBF64EB7}.png](4C99E49F-B17E-4A12-97EB-A74BEBF64EB7.png)
 
-Blocking public access in S3 bucket and enabling encryption
+## Blocking public access in S3 bucket and enabling encryption
 
 ![image.png](image.png)
 
-Enabling versioning and Ownership controls
+## Enabling versioning and Ownership controls
 
 ![{869213A6-1B66-464D-BB16-F338771C187C}.png](869213A6-1B66-464D-BB16-F338771C187C.png)
 
-Logging configuration
+## Logging configuration
 
 ![{6A1A3C87-3F26-4452-99AB-63A62046E94C}.png](6A1A3C87-3F26-4452-99AB-63A62046E94C.png)
 
-Bucket policy configuration
+## Bucket policy configuration
 
 Here in this bucket policy we have configured a policy that denies any insecure transport.
 
 ![{3DEE78BA-E6BF-494D-B7FF-A1F84AB2701A}.png](3DEE78BA-E6BF-494D-B7FF-A1F84AB2701A.png)
+
+## Verification
+
+![{567519A4-9CBD-487D-8B81-2AE3BEF1F582}.png](567519A4-9CBD-487D-8B81-2AE3BEF1F582.png)
+
+![{5EEA3166-FA5C-4B35-A177-BD2033C89BFB}.png](5EEA3166-FA5C-4B35-A177-BD2033C89BFB.png)
+
+![{83715840-A8AA-4FD6-8845-622986E6BD66}.png](83715840-A8AA-4FD6-8845-622986E6BD66.png)
+
+![{276347ED-0061-4D33-9980-886E211DBAD2}.png](276347ED-0061-4D33-9980-886E211DBAD2.png)
+
+![{D69D237B-0A53-466A-8D9D-D87E7C8F8F5F}.png](D69D237B-0A53-466A-8D9D-D87E7C8F8F5F.png)
