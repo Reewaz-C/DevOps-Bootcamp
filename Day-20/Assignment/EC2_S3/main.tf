@@ -7,7 +7,7 @@ terraform {
   }
 }
 provider "aws" {
-  region = "us-east-1"
+  region = var.region
 }
 
 data "aws_ami" "ubuntu" {
@@ -20,7 +20,7 @@ data "aws_ami" "ubuntu" {
 }
 
 resource "aws_vpc" "EC2_VPC" {
-  cidr_block = "10.0.0.0/16"
+  cidr_block = var.vpc_cidr
   tags = {
     Name = "EC2_VPC"
   }
@@ -28,7 +28,7 @@ resource "aws_vpc" "EC2_VPC" {
 
 resource "aws_subnet" "EC2_subnet" {
   vpc_id                  = aws_vpc.EC2_VPC.id
-  cidr_block              = "10.0.1.0/24"
+  cidr_block              = var.public_subnet_cidr
   availability_zone       = "us-east-1a"
   map_public_ip_on_launch = true
   tags = {
@@ -83,14 +83,14 @@ resource "aws_instance" "server" {
   ami                    = data.aws_ami.ubuntu.id
   vpc_security_group_ids = [aws_security_group.EC2SG.id]
   subnet_id              = aws_subnet.EC2_subnet.id
-  instance_type          = "t3.micro"
+  instance_type          = var.instance_type
   tags = {
     Name = "My-Server"
   }
 }
 
 resource "aws_s3_bucket" "logbucket" {
-  bucket = "riwajlogbucket9865990000"
+  bucket = var.log_bucket_name
   tags = {
     Name = "S3-log-bucket"
   }
@@ -177,7 +177,7 @@ resource "aws_s3_bucket_policy" "log_bucket" {
 }
 
 resource "aws_s3_bucket" "main_bucket" {
-  bucket = "riwajbucket9865990000"
+  bucket = var.main_bucket_name
   tags = {
     Name = "my_s3"
   }
