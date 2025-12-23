@@ -2,10 +2,11 @@
 
 ## Committing code changes to GitHub
 
-![Commit Changes](Img/{8C8F0CD8-AD9D-410D-B124-D32F906FBEDD}.png)
+![Commit Changes](Img/gitpush.png)
+
 ## Switch to new Branch
 
-![New Branch](Img/{EE30CCEB-9392-4AFE-A853-79A5D9ACC990}.png)
+![New Branch](Img/newbranch.png)
 ## Create [variables.tf](http://variables.tf) file
 
 Here we have created [variables.tf](http://variables.tf) which parameterizes our infrastructure which makes our code reusable and secure.
@@ -119,4 +120,4 @@ output "main_bucket_name" {
 
 ## Verification
 
-![Verification Results](Img/{FFDA4094-FB16-4679-995A-2AB4C1479C04}.png)
+![Verification Results](Img/tfoutputs.png)
