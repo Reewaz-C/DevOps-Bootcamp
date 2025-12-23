@@ -29,7 +29,7 @@ resource "aws_vpc" "EC2_VPC" {
 resource "aws_subnet" "EC2_subnet" {
   vpc_id                  = aws_vpc.EC2_VPC.id
   cidr_block              = var.public_subnet_cidr
-  availability_zone       = "us-east-1a"
+  availability_zone       = var.availability_zone
   map_public_ip_on_launch = true
   tags = {
     Name = "EC2-subnet"
