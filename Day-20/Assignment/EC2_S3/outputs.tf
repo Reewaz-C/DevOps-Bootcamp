@@ -13,7 +13,7 @@ output "instance_id" {
     value = aws_instance.server.id
 }
 
-output "EC2_public_ip {
+output "EC2_public_ip" {
     description = "public Ip of Ec2 instance"
     value = aws_instance.server.public_ip
 }
