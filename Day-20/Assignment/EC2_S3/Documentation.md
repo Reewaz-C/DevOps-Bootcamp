@@ -2,12 +2,10 @@
 
 ## Committing code changes to GitHub
 
-![/Img/{8C8F0CD8-AD9D-410D-B124-D32F906FBEDD}.png](8C8F0CD8-AD9D-410D-B124-D32F906FBEDD.png)
-
+![Commit Changes](Img/{8C8F0CD8-AD9D-410D-B124-D32F906FBEDD}.png)
 ## Switch to new Branch
 
-![/Img/{EE30CCEB-9392-4AFE-A853-79A5D9ACC990}.png](EE30CCEB-9392-4AFE-A853-79A5D9ACC990.png)
-
+![New Branch](Img/{EE30CCEB-9392-4AFE-A853-79A5D9ACC990}.png)
 ## Create [variables.tf](http://variables.tf) file
 
 Here we have created [variables.tf](http://variables.tf) which parameterizes our infrastructure which makes our code reusable and secure.
@@ -72,7 +70,7 @@ variable "main_bucket_name" {
 
 Here we then update our existing [main.tf](http://main.tf) file where we call the variables defined in [variables.tf](http://variables.tf) file instead of hardcoding the values.
 
-![/Img/image.png](image.png)
+![Main TF Update](Img/image.png)
 
 ## Create terraform.tfvars file
 
@@ -121,4 +119,4 @@ output "main_bucket_name" {
 
 ## Verification
 
-![/Img/{FFDA4094-FB16-4679-995A-2AB4C1479C04}.png](FFDA4094-FB16-4679-995A-2AB4C1479C04.png)
+![Verification Results](Img/{FFDA4094-FB16-4679-995A-2AB4C1479C04}.png)
