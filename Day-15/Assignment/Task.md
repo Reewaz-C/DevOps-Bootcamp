@@ -22,7 +22,7 @@
 
 ![alt text](../Img/image.png)
 
-![image.png](../Img/image%206.png)
+![alt text](../Img/image%206.png)
 
 ![alt text](../Img/image%207.png)
 
