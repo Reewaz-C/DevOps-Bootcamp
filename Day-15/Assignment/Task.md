@@ -34,15 +34,8 @@
 
 When working with AWS, securely managing your credentials is crucial. Mishandling can lead to unauthorized access and potential security breaches.
 
-### **4.1 Enable Multi-Factor Authentication (MFA) for the Root Account**
 
-The very first step in securing any AWS environment should always be enabling MFA for the root account. This might sound obvious but it’s one pf the most frequently neglected security measure. The root user is the most powerful user within the AWS account. Root has access to very resource, configurations, infrastructure and if unauthorized person gained access of the root credentials they effectly own the AWS account. AWS supports several types of MFA devices, including virtual MFA apps like Google Authenticator and Authy. 
-
-![image.png](../Img/image%209.png)
-
-![image.png](../Img/image%2010.png)
-
-### **4.2 Use IAM Roles and Follow the Principle of Least Privilege**
+### **4.1 Use IAM Roles and Follow the Principle of Least Privilege**
 
 After securing the root account with Multi-Factor Authentication (MFA), the next critical step in hardening your AWS environment is enforcing **least privilege access** through the correct use of **IAM roles**. Also never use the root account for daily operations.
 
@@ -51,7 +44,7 @@ aws iam create-user --user-name devops-user
 aws iam add-user-to-group --user-name devops-user --group-name S3AccessGroup
 ```
 
-### 4.3 **Use Access Keys Securely**
+### 4.2 **Use Access Keys Securely**
 
 When using AWS CLI, access keys (the **`AWS_ACCESS_KEY_ID`** and `AWS_SECRET_ACCESS_KEY`) are the primary credentials for programmatic access. To maintain security, these keys should **never be hardcoded directly into scripts, code repositories, or configuration files** that might be shared or version-controlled, as this can lead to credential leaks and potential unauthorized access.
 
@@ -59,7 +52,7 @@ Instead, AWS provides the use of **profiles** through the `~/.aws/credentials` f
 
 ![image.png](../Img/image%2011.png)
 
-### 4.4 **Rotate Credentials Regularly**
+### 4.3 **Rotate Credentials Regularly**
 
 Regularly rotating AWS credentials is a critical practice for maintaining the security of your cloud environment. Long-term access keys that are never changed pose a significant risk if they are accidentally exposed or compromised. To mitigate this, you should create new access keys periodically and replace the old ones, ensuring that no key remains active indefinitely.
 
