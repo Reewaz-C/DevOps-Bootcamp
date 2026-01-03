@@ -20,11 +20,11 @@
 
 ## 3. Creating a S3 bucket
 
-![image.png](../Img/image%205.png)
+![alt text](../Img/image.png)
 
 ![image.png](../Img/image%206.png)
 
-![image.png](../Img/image%207.png)
+![alt text](../Img/image 7.png)
 
 ### 3.1 Listing the created bucket using AWS CLI
 
