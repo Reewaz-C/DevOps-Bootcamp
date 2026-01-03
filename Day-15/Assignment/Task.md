@@ -51,7 +51,7 @@ When using AWS CLI, access keys (the **`AWS_ACCESS_KEY_ID`** and `AWS_SECRET_ACC
 
 Instead, AWS provides the use of **profiles** through the `~/.aws/credentials` file, allowing you to define multiple sets of credentials for different accounts or roles.
 
-![image.png](../Img/image%2011.png)
+![alt text](../Img/image%2011.png)
 
 ### 4.3 **Rotate Credentials Regularly**
 
