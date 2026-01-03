@@ -22,7 +22,8 @@
 
 ![alt text](../Img/image.png)
 
-![alt text](../Img/image%206.png)
+![alt text](../Img/image%206.png) 
+<!-- #image added -->
 
 ![alt text](../Img/image%207.png)
 
